@@ -12,7 +12,45 @@ body{
 }
 .main_wrapper{
 
+  width: 600px;
 }
-.group{
+.accordion{
 
+}
+.hiden-pic{
+
+}
+.img{
+  width: 350px;
+}
+.f{
+  max-width: 500px;
+  margin: 0, auto;
+  margin-bottom: 55x;
+}
+.f-item{
+  border: 1px solid black;
+  box-sizing: border-box;
+}
+.title{
+  display: block;
+  cursor: pointer;
+  width: 100%;
+  padding: 10px;
+  transition: 0.4s;
+}
+/* .title:hover{
+  box-sizing: border-box;
+  background-color: rgb(34, 160, 72);
+} */
+.hiden-pic{
+  display: none;
+}
+
+.f-input{
+  appearance: none;
+  position: absolute;
+}
+.f-input:checked + .hiden-pic{
+  display: block;
 }
