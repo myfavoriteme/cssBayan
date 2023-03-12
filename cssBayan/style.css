@@ -4,7 +4,7 @@ body{
 .main{
   width: 100%;
   height: 1080px;
-  background-color: blanchedalmond;
+  /* background-color: blanchedalmond; */
   display: flex;
   flex-direction: column;
   /* justify-content: center; */
@@ -24,20 +24,26 @@ body{
   width: 350px;
 }
 .f{
-  max-width: 500px;
+  /* max-width: 500px; */
   margin: 0, auto;
   margin-bottom: 55x;
+  transition: 0.8s;
 }
 .f-item{
-  border: 1px solid black;
+  /* border: 1px solid black; */
   box-sizing: border-box;
 }
 .title{
-  display: block;
+  box-sizing: border-box;
+  display: flex;
   cursor: pointer;
   width: 100%;
   padding: 10px;
   transition: 0.4s;
+  justify-content: space-between;
+  font-weight: 600;
+  font-size: 28px;
+  color:  rgb(0, 81, 255);
 }
 /* .title:hover{
   box-sizing: border-box;
@@ -46,11 +52,39 @@ body{
 .hiden-pic{
   display: none;
 }
-
+.f-item{
+  width: 100%;
+}
 .f-input{
   appearance: none;
   position: absolute;
 }
-.f-input:checked + .hiden-pic{
+.f-input:checked ~ .hiden-pic{
   display: block;
+}
+
+.f-input:checked ~ .title:after{
+  /* content: '\2212'; */
+  transform: rotate(45deg);
+  transition: 0.5s;
+}
+.f-input:checked ~ .title{
+  color: black;
+}
+
+/* .accordion:hover .f{
+  background-color: aqua;
+} */
+.accordion:hover .title:after{
+  content: '\002B';
+  transition: 0.5s;
+  font-weight: 600;
+  color: black;
+} 
+.accordion:hover .title{
+  color: black;
+}
+.accordion:hover .f-input:checked ~ .title:after{
+  /* content: '\2212'; */
+  transform: rotate(45deg);
 }
