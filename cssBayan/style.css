@@ -11,25 +11,35 @@ body{
   /* justify-content: center; */
   align-items: center;
 }
-.main_wrapper{
+.text{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+label{
+  /* z-index: 100; */
+  cursor:  pointer;
+}
+label:hover .hiden-pic{
+  display: block;
+  width: 100%;
+}
 
+label:hover .plus{
+  transform: rotate(45deg);
+}
+
+.main_wrapper{
   width: 600px;
 }
-.accordion{
 
-}
-.hiden-pic{
-
-}
 .img{
-  width: 350px;
+  width: 70%;
   margin: 0 auto;
   display: block;
 }
 .f{
-  /* max-width: 500px; */
   margin: 0, auto;
-  margin-bottom: 55x;
   transition: 0.8s;
 }
 .f-item{
@@ -37,26 +47,39 @@ body{
   box-sizing: border-box;
 }
 .title{
+  margin: 1rem;
+
   box-sizing: border-box;
   display: flex;
   cursor: pointer;
   width: 100%;
-  padding: 10px;
+  /* padding: 1rem; */
   transition: 0.4s;
   justify-content: space-between;
   font-weight: 600;
-  font-size: 28px;
+  font-size: 2rem;
   color:  rgb(0, 81, 255);
+  transition: all ease 1s;
 }
-/* .title:hover{
-  box-sizing: border-box;
-  background-color: rgb(34, 160, 72);
-} */
-.hiden-pic{
+.plus{
+  margin: 0;
+  font-size: 30px;
+  font-weight: 900;
+  display: block;
+  text-align: center;
+  height: fit-content;
+  transition: 0.5s;
   display: none;
+}
+.hiden-pic{
+  margin: 0 auto;
+  width: 0;
+  /* display: none; */
+  transition: all ease 0.5s;
 }
 .f-item{
   width: 100%;
+  cursor: pointer;
 }
 .f-input{
   appearance: none;
@@ -64,30 +87,38 @@ body{
 }
 .f-input:checked ~ .hiden-pic{
   display: block;
+  width: 100%;
 }
 
-.f-input:checked ~ .title:after{
-  /* content: '\2212'; */
+/* .f-input:checked ~ .title:after{
+  transform: rotate(45deg);
+  transition: 0.5s;
+} */
+
+.f-input:checked + .text > .title{
+  color: black;
+}
+.f-input:checked + .text > .plus{
   transform: rotate(45deg);
   transition: 0.5s;
 }
-.f-input:checked ~ .title{
-  color: black;
+.f:hover .hiden-pic{
+  display: block; 
 }
 
-/* .accordion:hover .f{
-  background-color: aqua;
-} */
-.accordion:hover .title:after{
+.accordion:hover .plus{
+  display: block;
+}
+/* .accordion:hover .title:after{
   content: '\002B';
   transition: 0.5s;
   font-weight: 600;
   color: black;
-} 
+}  */
 .accordion:hover .title{
   color: black;
 }
-.accordion:hover .f-input:checked ~ .title:after{
+.accordion:hover .f-input:checked ~ .plus{
   /* content: '\2212'; */
   transform: rotate(45deg);
 }
@@ -97,7 +128,7 @@ body{
     width: 90%;
   }
   .title{
-    font-size: 20px;
+    font-size: 1.5rem;
   }
   .img{
     width: 100%;
@@ -106,4 +137,7 @@ body{
 
 @media screen and (max-width: 460px){
 
+}
+.label:hover  .plus{
+  transform: rotate(45deg);
 }
