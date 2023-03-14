@@ -4,11 +4,8 @@ body{
 }
 .main{
   width: 100%;
-  /* height: 1080px; */
-  /* background-color: blanchedalmond; */
   display: flex;
   flex-direction: column;
-  /* justify-content: center; */
   align-items: center;
 }
 .text{
@@ -30,7 +27,7 @@ label:hover .plus{
 }
 
 .main_wrapper{
-  width: 600px;
+  width: 40rem;
 }
 
 .img{
@@ -43,7 +40,6 @@ label:hover .plus{
   transition: 0.8s;
 }
 .f-item{
-  /* border: 1px solid black; */
   box-sizing: border-box;
 }
 .title{
@@ -63,12 +59,12 @@ label:hover .plus{
 }
 .plus{
   margin: 0;
-  font-size: 30px;
+  font-size: 2rem;
   font-weight: 900;
   display: block;
   text-align: center;
   height: fit-content;
-  transition: 0.5s;
+  transition: all 1s;
   display: none;
 }
 .hiden-pic{
@@ -100,7 +96,7 @@ label:hover .plus{
 }
 .f-input:checked + .text > .plus{
   transform: rotate(45deg);
-  transition: 0.5s;
+  transition: 5s;
 }
 .f:hover .hiden-pic{
   display: block; 
@@ -108,6 +104,7 @@ label:hover .plus{
 
 .accordion:hover .plus{
   display: block;
+  transition: 1s;
 }
 /* .accordion:hover .title:after{
   content: '\002B';
@@ -121,6 +118,7 @@ label:hover .plus{
 .accordion:hover .f-input:checked ~ .plus{
   /* content: '\2212'; */
   transform: rotate(45deg);
+  transition: 1s;
 }
 
 @media screen and (max-width: 680px){
